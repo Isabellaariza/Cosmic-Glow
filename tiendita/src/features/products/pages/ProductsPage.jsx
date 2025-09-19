@@ -35,6 +35,7 @@ export function ProductsPage({ onAddToCart }) {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -45,6 +46,7 @@ export function ProductsPage({ onAddToCart }) {
         await new Promise(resolve => setTimeout(resolve, 2000));
       } catch (error) {
         console.error('Error loading products:', error);
+        setError('Error al cargar los productos. Por favor, intenta de nuevo.');
       } finally {
         setIsLoading(false);
       }
@@ -71,6 +73,16 @@ export function ProductsPage({ onAddToCart }) {
       <div className="products-container">
         <div className="loading-message">
           <span>Cargando productos...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="products-container">
+        <div className="error-message">
+          <span>{error}</span>
         </div>
       </div>
     );
