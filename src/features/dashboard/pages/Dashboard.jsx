@@ -2,7 +2,7 @@ import React from 'react';
 import { useId, useState } from 'react';
 import Header from '../../shared/components/Header/Header.jsx';
 import Footer from '../../shared/components/Footer/Footer.jsx';
-import './dashboard.css';
+import './Dashboard.css';
 
 const Dashboard = () => {
     const id = useId();
