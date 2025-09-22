@@ -8,11 +8,12 @@ const Footer = () => {
     return (
         <footer className="main-footer">
         <div className="footer-content">
-            <p>&copy; {new Date().getFullYear()} Tiendita. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Cosmic Glow. Todos los derechos reservados.</p>
             <div className="social-links">
-            <a href="#" className="social-icon"><i className="fab fa-facebook"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
+                <a href="#" className="social-icon">Instagram</a>
+                <a href="#" className="social-icon">TikTok</a>
+                <a href="#" className="social-icon">Facebook</a>
+                <a href="#" className="social-icon">Twitter</a>
             </div>
         </div>
         </footer>

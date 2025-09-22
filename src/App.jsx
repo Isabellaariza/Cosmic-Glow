@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './features/shared/components/Header/Header.jsx'; 
 import { ProductsPage } from './features/products/pages/ProductsPage.jsx';
 import { CartPage } from './features/car/pages/CarPage.jsx'; 
@@ -9,6 +9,8 @@ import './App.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const location = useLocation();
+  const isProductsPage = location.pathname === '/products';
 
   const handleAddToCart = (product) => {
     const existingItem = cartItems.find(item => item.id === product.id);
@@ -47,7 +49,7 @@ function App() {
 
   return (
     <>
-      <Header cartItemCount={cartItems.length} />
+      <Header cartItemCount={cartItems.length} showCartIcon={isProductsPage} />
       <main className="main-content">
         <Routes>
           <Route path='/' element={<Dashboard />}></Route>

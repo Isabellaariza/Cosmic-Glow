@@ -19,18 +19,26 @@ text-align: center;
 }
 
 .social-links {
-margin-top: 3px;
-display: flex;
-gap: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social-icon {
-color: var(--secondary-color);
-transition: color 200ms ease-in-out;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .social-icon:hover {
-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
