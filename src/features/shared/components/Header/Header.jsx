@@ -28,8 +28,11 @@ const Header = ({ cartItemCount }) => {
           <li><Link to="/dashboard" className="nav-item" onClick={() => setIsMenuOpen(false)}>Dashboard</Link></li>
           <li><Link to="/products" className="nav-item" onClick={() => setIsMenuOpen(false)}>Products</Link></li>
           <li>
-            <Link to="/car" className="nav-item" onClick={() => setIsMenuOpen(false)}>
-              🛒 ({cartItemCount})
+            <Link to="/car" className="nav-item cart-link" onClick={() => setIsMenuOpen(false)}>
+              🛒 Carrito
+              {cartItemCount > 0 && (
+                <span className="cart-badge">{cartItemCount}</span>
+              )}
             </Link>
           </li>
           <li><Link to="/contact" className="nav-item" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
