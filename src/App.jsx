@@ -48,24 +48,26 @@ function App() {
   return (
     <>
       <Header cartItemCount={cartItems.length} />
-      <Routes>
-        <Route path='/' element={<Dashboard />}></Route>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route
-          path="/products"
-          element={<ProductsPage onAddToCart={handleAddToCart} />}
-        />
-        <Route
-          path="/car"
-          element={<CartPage 
-            cartItems={cartItems} 
-            onRemoveFromCart={handleRemoveFromCart}
-            onIncreaseQuantity={handleIncreaseQuantity}
-            onDecreaseQuantity={handleDecreaseQuantity}
-          />}
-        />
-      </Routes>
+      <main className="main-content">
+        <Routes>
+          <Route path='/' element={<Dashboard />}></Route>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/products"
+            element={<ProductsPage onAddToCart={handleAddToCart} />}
+          />
+          <Route
+            path="/car"
+            element={<CartPage 
+              cartItems={cartItems} 
+              onRemoveFromCart={handleRemoveFromCart}
+              onIncreaseQuantity={handleIncreaseQuantity}
+              onDecreaseQuantity={handleDecreaseQuantity}
+            />}
+          />
+        </Routes>
+      </main>
     </>
   );
 }
