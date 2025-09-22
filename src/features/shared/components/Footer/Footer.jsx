@@ -1,6 +1,6 @@
 import React from 'react';
 import { useId } from 'react';
-import './footer.css';
+import './Footer.css';
 
 const Footer = () => {
     const id = useId();
