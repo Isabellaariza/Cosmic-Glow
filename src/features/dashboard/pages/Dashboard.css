@@ -1,10 +1,8 @@
 .dashboard-layout {
     background-color: #ffffff;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1366px;
     margin: 0 auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 .dashboard-content {
@@ -116,8 +114,7 @@
 
 @media (max-width: 480px) {
     .dashboard-layout {
-        width: 100vw;
-        max-width: 100%;
+        width: 100%;
     }
     
     .dashboard-content {

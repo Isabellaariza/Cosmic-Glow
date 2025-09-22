@@ -1,11 +1,8 @@
 .products-container {
     padding: 20px;
     max-width: 1310px;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
     margin: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 .page-title {
@@ -205,11 +202,9 @@
 
 @media (max-width: 500px) {
     .products-container {
-        width: 100vw;
-        max-width: 100%;
+        width: 100%;
         padding: 10px;
         margin: 0;
-        box-sizing: border-box;
     }
     
     .page-title {
