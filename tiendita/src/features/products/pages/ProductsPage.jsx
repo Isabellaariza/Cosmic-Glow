@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { fetchProducts } from "../../../api/products_api";
 import "./ProductsPage.css";
 
-// Componente para la tarjeta de producto, ahora definido aquí.
 function ProductCard({ product, onAddToCart }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
