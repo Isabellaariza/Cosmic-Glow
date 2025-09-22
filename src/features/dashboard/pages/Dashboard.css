@@ -1,9 +1,10 @@
 .dashboard-layout {
     background-color: #ffffff;
-    width: 100%;
-    max-width: 1366px;
+    width: 100vw;
+    max-width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .dashboard-content {
@@ -114,16 +115,32 @@
 }
 
 @media (max-width: 480px) {
+    .dashboard-layout {
+        width: 100vw;
+        max-width: 100%;
+    }
+    
     .dashboard-content {
         width: 100%;
         padding: 0.5rem;
+        box-sizing: border-box;
     }
     
     .dashboard-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        text-align: center;
     }
     
     .dashboard-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        text-align: left;
+    }
+    
+    .dashboard-card {
+        padding: 0.8rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
     }
 }
