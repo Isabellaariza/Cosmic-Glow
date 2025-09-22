@@ -1,7 +1,7 @@
 import React from 'react';
 import { useId } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
+import './Header.css';
 
 const Header = ({ cartItemCount }) => {
   const id = useId();
