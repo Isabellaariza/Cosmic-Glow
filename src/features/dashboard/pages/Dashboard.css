@@ -1,12 +1,17 @@
 .dashboard-layout {
     background-color: #ffffff;
-    width: 1366px;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .dashboard-content {
     padding: 2rem;
     width: 90%;
+    max-width: 100%;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .dashboard-title {
@@ -82,18 +87,43 @@
         width: 100%;
     }
     
+    .dashboard-content {
+        width: 95%;
+        padding: 1rem;
+        margin: auto;
+    }
+    
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+    
     .dashboard-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .dashboard-subtitle {
-        font-size: 1.125rem;
+        font-size: 1rem;
         color: black; 
         text-align: justify;
     }
+    
+    .dashboard-card {
+        padding: 1rem;
+    }
+}
 
+@media (max-width: 480px) {
     .dashboard-content {
-        width: 90%;
-        margin: auto;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+    
+    .dashboard-subtitle {
+        font-size: 0.9rem;
     }
 }

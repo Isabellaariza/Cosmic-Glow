@@ -1,7 +1,9 @@
 .products-container {
     padding: 20px;
-    width: 1310px;
+    max-width: 1310px;
+    width: 100%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 .page-title {
@@ -201,8 +203,9 @@
 
 @media (max-width: 500px) {
     .products-container {
-        width: 95%;
+        width: 100%;
         padding: 10px;
+        margin: 0;
     }
     
     .page-title {
@@ -212,20 +215,24 @@
     .category-filters {
         gap: 8px;
         margin-bottom: 1.5rem;
+        padding: 0 10px;
     }
     
     .category-btn {
-        padding: 8px 15px;
+        padding: 8px 12px;
         font-size: 0.8rem;
     }
     
     .product-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        padding: 0 10px;
     }
 
     .product-card {
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .product-name {
