@@ -157,6 +157,10 @@
     100% { transform: scale(1); }
 }
 
+.cart-icon-link {
+    display: none !important;
+}
+
 @media (max-width: 1024px) {
     .hamburger-btn {
         display: flex;
@@ -167,8 +171,8 @@
         display: none;
     }
     
-    .nav-links .cart-link {
-        display: none;
+    .cart-icon-link {
+        display: inline-flex !important;
     }
     
     .nav-links.nav-open {
