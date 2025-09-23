@@ -6,9 +6,14 @@ import './Header.css';
 const Header = ({ cartItemCount, showCartIcon = false }) => {
   const id = useId();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleProfile = () => {
+    setIsProfileOpen(!isProfileOpen);
   };
 
   return (
@@ -47,8 +52,17 @@ const Header = ({ cartItemCount, showCartIcon = false }) => {
             </Link>
           </li>
           <li><Link to="/contact" className="nav-item" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
-          <li><Link to="/profile" className="nav-item" onClick={() => setIsMenuOpen(false)}>Profile</Link></li>
-          <li><Link to="/logout" className="nav-item" onClick={() => setIsMenuOpen(false)}>Logout</Link></li>
+          <li className="profile-dropdown">
+            <button className="profile-btn nav-item" onClick={toggleProfile}>
+              👤
+            </button>
+            {isProfileOpen && (
+              <div className="profile-menu">
+                <Link to="/profile" className="profile-menu-item" onClick={() => setIsProfileOpen(false)}>👤 Perfil</Link>
+                <Link to="/logout" className="profile-menu-item" onClick={() => setIsProfileOpen(false)}>🚪 Logout</Link>
+              </div>
+            )}
+          </li>
         </ul>
       </nav>
     </header>

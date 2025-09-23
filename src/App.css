@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+button:focus,
+button:active,
+a:focus,
+a:active,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body {
   overflow-x: hidden;
   width: 100%;

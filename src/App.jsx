@@ -5,6 +5,7 @@ import { ProductsPage } from './features/products/pages/ProductsPage.jsx';
 import { CartPage } from './features/car/pages/CarPage.jsx'; 
 import Dashboard from './features/dashboard/pages/Dashboard.jsx';
 import Contact from './features/contact/Contact.jsx';
+import Profile from './features/profile/Profile.jsx';
 import './App.css';
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
               onDecreaseQuantity={handleDecreaseQuantity}
             />}
           />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
     </>
