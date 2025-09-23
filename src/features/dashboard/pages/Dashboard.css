@@ -47,6 +47,7 @@
 .hero-btn:hover {
     background-color: #8A8AFF;
     transform: translateY(-2px);
+    color: white;
 }
 
 /* Section Styles */
@@ -117,6 +118,7 @@ section {
 
 .featured-btn:hover {
     background-color: #8A8AFF;
+    color: white;
 }
 
 

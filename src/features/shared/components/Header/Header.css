@@ -167,6 +167,10 @@
         display: none;
     }
     
+    .nav-links .cart-link {
+        display: none;
+    }
+    
     .nav-links.nav-open {
         display: flex;
         position: absolute;
@@ -182,6 +186,10 @@
         border-radius: 0 0 0.75rem 0.75rem;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         z-index: 1000;
+    }
+    
+    .nav-links.nav-open .cart-link {
+        display: block;
     }
     
     .nav-item {
